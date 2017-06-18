@@ -1,5 +1,50 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<header>
+  <div class="container">
+    <img src="assets/super-logo.png" alt="Bulma logo">
+  </div>
+</header>
+<hr>
 
 {{outlet}}
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item">
+        <img src="assets/super-logo.png" alt="Bulma logo">
+      </a>
+    </div>
+
+    <div class="nav-center">
+      <a class="nav-item">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      <a class="nav-item">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-right nav-menu">
+      {{#link-to "index" class="nav-item"}}
+        Home
+      {{/link-to}}
+      {{#link-to "settings" class="nav-item"}}
+        Settings
+      {{/link-to}}
+    </div>
+  </div>
+</nav>
